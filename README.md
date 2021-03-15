@@ -19,14 +19,14 @@ var translator = new GoogleTranslator(SupportedLanguageEnum.fr, SupportedLanguag
 
 After that, you can translate something:
 
-```charp
+```csharp
 string text = "Bonjour!";
 string eng = translator.Text(text);
 ```
 
 Or maybe you need async, you can use:
 
-```charp
+```csharp
 string text = "Bonjour!";
 string eng = await translator.GetTextAsync(text);
 ```
