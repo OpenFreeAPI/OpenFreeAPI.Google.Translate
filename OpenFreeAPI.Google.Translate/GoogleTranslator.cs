@@ -10,7 +10,7 @@ using System.Text;
 using System.Net;
 using System.Threading.Tasks;
 
-using OpenFreeAPI.Google.Translate.Model;
+using OpenFreeAPI.Google.Translate.Models;
 
 namespace OpenFreeAPI.Google.Translate
 {
@@ -48,7 +48,7 @@ namespace OpenFreeAPI.Google.Translate
             return await web.DownloadStringTaskAsync(uri);
         }
 
-        public string Text(string text)
+        public string Trasnlate(string text)
         {
             string Dest = string.Empty;
             /* FIXED - Remove '\n' (Line feed/new line char) */
@@ -63,7 +63,7 @@ namespace OpenFreeAPI.Google.Translate
             return Dest;
         }
 
-        public async Task<string> GetTextAsync(string source)
+        public async Task<string> TrasnlateAsync(string source)
         {
             string result = string.Empty;
             source = (await DownloadAsync(source)).Replace("\n", "");

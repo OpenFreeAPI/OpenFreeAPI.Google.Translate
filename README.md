@@ -8,7 +8,7 @@ Before all, we need to using namespace;
 
 ```csharp
 using OpenFreeAPI.Google.Translate;
-using OpenFreeAPI.Google.Translate.Model;
+using OpenFreeAPI.Google.Translate.Models;
 ```
 
 Then, we create a translator instance. We use translating French to English as an example:
@@ -21,14 +21,14 @@ After that, you can translate something:
 
 ```csharp
 string text = "Bonjour!";
-string eng = translator.Text(text);
+string eng = translator.Trasnlate(text);
 ```
 
 Or maybe you need async, you can use:
 
 ```csharp
 string text = "Bonjour!";
-string eng = await translator.GetTextAsync(text);
+string eng = await translator.TrasnlateAsync(text);
 ```
 
 ## Credit

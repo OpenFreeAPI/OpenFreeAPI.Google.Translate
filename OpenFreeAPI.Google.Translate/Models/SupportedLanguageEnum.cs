@@ -5,7 +5,7 @@
  * SRC LIC. : MIT license
  */
 
-namespace OpenFreeAPI.Google.Translate.Model
+namespace OpenFreeAPI.Google.Translate.Models
 {
     public enum SupportedLanguageEnum
     {

@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenFreeAPI.Google.Translate.Model
+namespace OpenFreeAPI.Google.Translate.Models
 {
     internal struct Block
     {
