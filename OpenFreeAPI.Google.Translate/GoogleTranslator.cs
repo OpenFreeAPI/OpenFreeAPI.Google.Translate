@@ -52,8 +52,9 @@ namespace OpenFreeAPI.Google.Translate
         {
             string Dest = string.Empty;
             /* FIXED - Remove '\n' (Line feed/new line char) */
-            text = (Download(text)).Replace("\n", "");
+            text = (Download(text)).Replace("\n", "").Replace("\\n", "\n");
             /* FIXED - Gets the multiples blocks that can be received */
+            
             Block Datablock = new Block(text);
             for (int n = 0; n < Datablock[0][0].Blocks; n++)
             {
@@ -61,6 +62,7 @@ namespace OpenFreeAPI.Google.Translate
                 Dest = string.Concat(Dest, splitData.Data[0]);
             }
             return Dest;
+            
         }
 
         public async Task<string> TrasnlateAsync(string source)
